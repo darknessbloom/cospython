@@ -1,10 +1,8 @@
 def solution(arr):
-    left, right = 0, len(arr)-1
-    while left<right:
-        arr[left], arr[right] = arr[right], arr[left]
-        left += 1
-        right -= 1
-    return arr
+    arr2=[]
+    for i in range(len(arr)-1,-1,-1):
+        arr2.append(arr[i])
+    return arr2
 
 #The following is code to output testcase.
 arr = [1, 4, 2, 3]
