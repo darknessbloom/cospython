@@ -2,8 +2,12 @@
 #import math
 
 def solution(price, grade):
-    #Write code here.
+    sale={"S":5,'G':10,'V':15}
     answer = 0
+    if grade.upper() in sale:
+        answer=int(price*(1-(sale[grade.upper()]/100)))
+        
+    
     return answer
 
 #The following is code to output testcase.
