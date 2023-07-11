@@ -1,14 +1,18 @@
 def func_a(month, day):
     month_list = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
-    total = 0;
-    for i in @@@:
-        total += @@@
-    total += @@@
-    return total - 1
+    total_day=0
+    if month==1:
+        total_day=day-1
+    else:
+        for i in range(month-1):
+            total_day+=month_list[i]
+        total_day+=(day-1)
+    return total_day
         
 def solution(start_month, start_day, end_month, end_day):
     start_total = func_a(start_month, start_day)
     end_total = func_a(end_month, end_day)
+    print(end_total,start_total)
     return end_total - start_total
 
 #The following is code to output testcase.
