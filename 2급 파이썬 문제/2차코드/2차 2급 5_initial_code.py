@@ -5,6 +5,7 @@ def solution(attack, recovery, hp):
         hp -= attack
         if hp <= 0:
             return count
+            #break
         hp += recovery
     return count
 
