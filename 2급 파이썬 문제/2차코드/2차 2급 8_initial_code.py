@@ -1,10 +1,12 @@
 def solution(number):
     count = 0
-    while number >= 0:
+    while number > 0:
         n = number % 10
+        print(n)
         if n == 2 or n == 3 or n == 5 or n == 7:
             count += 1
         number //= 10
+        print(number)
     return count
 
 #아래는 테스트케이스 출력을 해보기 위한 코드입니다. 아래 코드는 잘못된 부분이 없으니, solution함수만 수정하세요.
