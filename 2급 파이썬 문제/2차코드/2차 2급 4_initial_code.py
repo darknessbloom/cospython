@@ -4,6 +4,11 @@
 def solution(words):
     #여기에 코드를 작성해주세요.
     answer = ''
+    for word in words:
+        if len(word)>=5:
+            answer+=word
+    if len(answer)==0:
+        return 'empty'
     return answer
 
 #아래는 테스트케이스 출력을 해보기 위한 코드입니다.
